@@ -1,38 +1,91 @@
 .App {
   text-align: center;
+  /* background-color: grey; */
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW4aVSu8rOOisAGqCqVfQtEwq-3Wp_FvohhTGSqFKNApIKp1ysmVv35weOYG7BfsRvC8g&usqp=CAU'); */
+  /* background-size: 100% 100%; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 94vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.container__leftDiv {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.container_rightDiv {
+  height: 100%;
+  width: 950px;
+  /* background: yellow; */
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+    align-items: center;
+}
+
+.answerDiv {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  width: 50%;
+  
+}
+
+.container_rightDiv_grid {
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(3,1fr);
+  gap: 1px;
+  height: 200px;
+  width: 80%;
+  background: black;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.letters {
+  height: 60px;
+  width: 60px;
+  /* background-color: #ff9245; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  cursor:pointer;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+.disabled{
+  cursor:not-allowed;
+}
+
+.answerDiv h1 {
+  border-bottom: 2px solid black;
+  height: 40px;
+  width: 40px;
+  margin: 1%;
+}
+
+.agnBtn{
+  height: 40px;
+  width: 100px;
+  background-color: green;
+  border: none;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* border: 1px solid; */
+  padding: 2px;
+  box-shadow: 5px 10px #222121;
 }
